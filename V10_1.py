@@ -2,19 +2,18 @@
 
 
 def count_numbers(a, b, c, N):
-    count = 0 # Переменная в которой хранится количество чисел
-    num_list = [str(a), str(b), str(c)] # Задаем массив цифр a,b,c
-    for num in range(100, N + 1): # Цикл перебирает значения от 100 до N
-        num_str = str(num) # Приводим число в строку
-        if num_str[0] in num_list and num_str[1] in num_list and num_str[2] in num_list: # Проверяем принадлежит ли каждая цифра числа массиву [a,b,c]
-            count += 1 # Если принадлежит то добавляем к количеству чисел единицу
-    return count # возвращаем количество чисел
+    count = 0 
+    num_list = [str(a), str(b), str(c)]
+    for num in range(100, N + 1):
+        num_str = str(num) 
+        if num_str[0] in num_list and num_str[1] in num_list and num_str[2] in num_list:
+            count += 1
+    return count 
 
-
-a = int(input("Введите a:")) # Ввода данных из консоли
+a = int(input("Введите a:")) 
 b = int(input("Введите b:"))
 c = int(input("Введите v:"))
 N = int(input("Введите N (210 < N < 231):"))
 
-result = count_numbers(a, b, c, N) # Вызов фукнции с подсчетом количества чисел
+result = count_numbers(a, b, c, N) 
 print(f"Количество чисел на отрезке [100, {N}] из цифр {a}, {b}, {c}: {result}")
